@@ -1,0 +1,20 @@
+<p>Filter offenders by name: <input ng-model="$ctrl.query"/></p>
+
+<div class="container-fluid">
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>NAME</th>
+      <th>RISK LEVEL</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="offender in $ctrl.offenders | filter:{ name : $ctrl.query }">
+      <td>{{offender.id}}</td>
+      <td>{{offender.name}}</td>
+      <td>{{offender.riskLevel}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
