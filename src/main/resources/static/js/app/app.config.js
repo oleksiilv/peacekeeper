@@ -13,6 +13,6 @@ angular.
         when('/offender-form', {
           template: '<offender-form></offender-form>'
         }).
-        otherwise('/offender-xxx');
+        otherwise('/offender-list');
     }
   ]);
